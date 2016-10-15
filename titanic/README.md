@@ -3,7 +3,7 @@ Download, explore, and wrangle the Titanic passenger manifest dataset with an ey
 
 This tutorial is based on the Kaggle Competition,["Predicting Survival Aboard the Titanic"](https://www.kaggle.com/c/titanic)
 
-![RMS Titanic , Ocean Liner, (1912)](https://github.com/georgetown-analytics/XBUS-503-01.Data_Ingestion_and_Wrangling/titanic/blob/master/images/Cd51-1000g.gif)
+![RMS Titanic , Ocean Liner, (1912)](https://github.com/georgetown-analytics/XBUS-503-01.Data_Ingestion_and_Wrangling/blob/master/titanic/images/Cd51-1000g.gif)
 _Licensed under CC BY-SA 3.0 via Wikimedia Commons: "Cd51-1000g" by Boris Lux_
 
 ## STEP ONE: EXPLORATORY ANALYSIS
