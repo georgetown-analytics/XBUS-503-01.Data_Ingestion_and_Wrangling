@@ -3,7 +3,7 @@ Download, explore, and wrangle the Titanic passenger manifest dataset with an ey
 
 This tutorial is based on the Kaggle Competition,["Predicting Survival Aboard the Titanic"](https://www.kaggle.com/c/titanic)
 
-![RMS Titanic , Ocean Liner, (1912)](https://github.com/rebeccabilbro/titanic/blob/master/images/Cd51-1000g.gif)
+![RMS Titanic , Ocean Liner, (1912)](https://github.com/georgetown-analytics/XBUS-503-01.Data_Ingestion_and_Wrangling/titanic/blob/master/images/Cd51-1000g.gif)
 _Licensed under CC BY-SA 3.0 via Wikimedia Commons: "Cd51-1000g" by Boris Lux_
 
 ## STEP ONE: EXPLORATORY ANALYSIS
@@ -11,7 +11,9 @@ Start by cloning this repository.
 
 __Anaconda users__: you should have everything you need, but _if_ you find you are missing anything, type this into the command line:
 
-    conda install -c https://conda.anaconda.org/blaze <package>
+    conda install <package>
+
+**Windows users MUST install scikit-learn via conda install. DO NOT use pip install. It will fail.**
 
 __Others__: make sure the required libraries are installed by using:
 
@@ -44,13 +46,13 @@ Welcome back! Navigate to your titanic folder in the command line and then type 
 
 __Anaconda users__: you already have Scikit-learn! _If_ you ever find you are missing anything, type this into the command line:
 
-    conda install -c https://conda.anaconda.org/blaze <package>
+    conda install <package>
 
 Everyone else, make sure Scikit-learn is installed:
 
 __WINDOWS USERS__: 
 
-    pip install -U scikit-learn
+    conda install scikit-learn
 
 __MAC OSX USERS__: 
 
