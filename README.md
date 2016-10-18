@@ -10,3 +10,7 @@ The workshops and demos for this course are listed below along with links to mat
 **Day 2**
 
 * [Titanic Data Wrangling](https://github.com/georgetown-analytics/XBUS-503-01.Data_Ingestion_and_Wrangling/tree/master/titanic)
+
+**Bonus**
+
+If you are looking for more of a challenge on data wrangling, there is an additional notebook you can work through using the titanic data- [Additional wrangling challenge](https://github.com/georgetown-analytics/XBUS-503-01.Data_Ingestion_and_Wrangling/blob/master/titanic/additional_wrangling_challenge.ipynb)
