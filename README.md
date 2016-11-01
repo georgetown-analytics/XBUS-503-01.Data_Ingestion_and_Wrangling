@@ -10,6 +10,7 @@ The workshops and demos for this course are listed below along with links to mat
 **Day 2**
 
 * [Titanic Data Wrangling](https://github.com/georgetown-analytics/XBUS-503-01.Data_Ingestion_and_Wrangling/tree/master/titanic)
+* [Beautiful Soup and Pandas Demos]
 
 **Bonus**
 
