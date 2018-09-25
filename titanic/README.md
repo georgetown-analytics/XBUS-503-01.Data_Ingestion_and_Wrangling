@@ -1,7 +1,7 @@
 # Titanic
 Download, explore, and wrangle the Titanic passenger manifest dataset with an eye toward developing a predictive model for survival.
 
-This tutorial is based on the Kaggle Competition,["Predicting Survival Aboard the Titanic"](https://www.kaggle.com/c/titanic)
+This tutorial is based on the Kaggle Competition, ["Predicting Survival Aboard the Titanic"](https://www.kaggle.com/c/titanic)
 
 ![RMS Titanic , Ocean Liner, (1912)](https://github.com/georgetown-analytics/XBUS-503-01.Data_Ingestion_and_Wrangling/blob/master/titanic/images/Cd51-1000g.gif)
 _Licensed under CC BY-SA 3.0 via Wikimedia Commons: "Cd51-1000g" by Boris Lux_
@@ -21,7 +21,7 @@ __Others__: make sure the required libraries are installed by using:
 
 Then look inside the data folder and open ```train.csv``` to check out the dataset we'll be exploring today.  
 
-To start the lab, open up the iPython Notebook file: ```titanic_wrangling.ipynb```.
+To start the lab, type the following into the command line: ```jupyter notebook```.
 
 
 ### Things to think about
@@ -44,11 +44,11 @@ Welcome back! Navigate to your titanic folder in the command line and then type 
 
     git pull
 
-__Anaconda users__: you already have Scikit-learn! _If_ you ever find you are missing anything, type this into the command line:
+__Anaconda users__: you already have scikit-learn! _If_ you ever find you are missing anything, type this into the command line:
 
     conda install <package>
 
-Everyone else, make sure Scikit-learn is installed:
+Everyone else, make sure scikit-learn is installed:
 
 __WINDOWS USERS__: 
 
@@ -61,19 +61,17 @@ __MAC OSX USERS__:
 __LINUX w/ Python 2__: 	
 
 	sudo apt-get install build-essential python-dev python-setuptools \
-                     python-numpy python-scipy \
-                     libatlas-dev libatlas3gf-base
+                     python-numpy python-scipy libatlas-dev libatlas3gf-base
 	sudo apt-get install python-matplotlib
 
 __LINUX w/ Python 3__: 
 
  	sudo apt-get install build-essential python3-dev python3-setuptools \
- 					 python3-numpy python3-scipy \
-                     libatlas-dev libatlas3gf-base
+ 					     python3-numpy python3-scipy libatlas-dev libatlas3gf-base
     sudo apt-get install python-matplotlib
 
 
-Problems with installation? Check out: http://scikit-learn.org/stable/install.html
+Problems with installation? Please check out scikit-learn's [documentation](http://scikit-learn.org/stable/install.html) to learn more.
 
 
 ### Key Concepts    
@@ -82,7 +80,7 @@ __Machine Learning__
 __Classification__    
 
 __Cross-Validation__    
-http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.train_test_split.html
+http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
 
 __Model Evaluation__    
     -Classification reports    
@@ -102,6 +100,5 @@ http://scikit-learn.org/stable/modules/svm.html
 
 ### Sources
 This tutorial is based on the following tutorials for Kaggle's titanic competition:
-    - https://www.kaggle.com/mlchang/titanic/logistic-model-using-scikit-learn/run/91385
     - https://www.kaggle.com/c/titanic/details/getting-started-with-random-forests
     - https://github.com/savarin/pyconuk-introtutorial/tree/master/notebooks
