@@ -8,11 +8,11 @@ def get_source():
 
 
 def main():
-    soup = BeautifulSoup(get_source())
+    soup = BeautifulSoup(get_source(), "html5lib")
     html_id = 'block-views-v11-related-content-block-3'
 
-    for h5 in soup.find(id=html_id).find_all('h5'):
-        print(h5.find('a').string)
+    for item in soup.select("p.news-title a"):
+        print(item.string)
 
 
 if __name__ == '__main__':
