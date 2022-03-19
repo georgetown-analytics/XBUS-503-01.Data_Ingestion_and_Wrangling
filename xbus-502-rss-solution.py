@@ -42,7 +42,12 @@ def save_article(title, content):
     Save HTML content using a slugged version of the title as the basis for
     the filename
     """
-    pass
+    filename = slugify(title)
+
+    # NOTE: be sure to make the news directory
+    with open('news/' + filename, 'w') as f:
+        f.write(content)
+
 
 
 def main():
@@ -50,18 +55,22 @@ def main():
     Main execution
     """
     # grab RSS data and parse it
-    pass
+    result = feedparser.parse(RSS_URL)
+    entries = result['entries']
 
     # loop through each article/RSS item
     for entry in entries:
+        title = entry['title']
 
         # fetch article using url
         # hint: content = ???
-        pass
+        response = requests.get(entry['link'])
+        content = response.text
+
 
         # save to disk or print an error message
-        # hint: save_article(content)
-        pass
+        # hint: save_article(title, content)
+        save_article(title, content)
 
 
 ##########################################################################
