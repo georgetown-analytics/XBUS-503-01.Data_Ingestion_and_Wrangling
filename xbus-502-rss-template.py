@@ -42,6 +42,9 @@ def save_article(title, content):
     Save HTML content using a slugged version of the title as the basis for
     the filename
     """
+    filename = slugify(title)
+
+    # write code to save file
     pass
 
 
@@ -55,12 +58,11 @@ def main():
     # loop through each article/RSS item
     for entry in entries:
 
-        # fetch article using url
-        # hint: content = ???
+        # fetch article with requests library using url for the entry
         pass
 
-        # save to disk or print an error message
-        # hint: save_article(content)
+        # save to disk 
+        # hint: save_article(title, content)
         pass
 
 
