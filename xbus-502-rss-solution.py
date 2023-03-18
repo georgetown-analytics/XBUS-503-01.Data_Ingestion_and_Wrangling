@@ -1,6 +1,5 @@
-#!/usr/bin/env python
 """
-Template for RSS exercise
+Solutions for RSS exercise
 """
 ##########################################################################
 ## Imports
@@ -41,13 +40,13 @@ def save_article(title, content):
     """
     Save HTML content using a slugged version of the title as the basis for
     the filename
+    YOU MUST CREATE THE DIRECTORY 'news' before running
     """
     filename = slugify(title)
-
-    # NOTE: be sure to make the news directory
-    with open('news/' + filename, 'w') as f:
+    filename = title+".html"
+    filename = filename.replace("?", "") #replaces question marks in titles as this may cause errors.
+    with open("news/"+filename, 'w', encoding='utf-8') as f:
         f.write(content)
-
 
 
 def main():
@@ -56,21 +55,22 @@ def main():
     """
     # grab RSS data and parse it
     result = feedparser.parse(RSS_URL)
-    entries = result['entries']
+    entries = result.entries 
 
     # loop through each article/RSS item
     for entry in entries:
-        title = entry['title']
 
         # fetch article using url
         # hint: content = ???
-        response = requests.get(entry['link'])
-        content = response.text
-
-
+        titlex = entry['title']
+        link = entry['link']
+        response = requests.get(link, headers={"user-agent":"curl/7.86.0"}) 
+        contentx = response.text 
+        print("Saving "+titlex+"...")
         # save to disk or print an error message
-        # hint: save_article(title, content)
-        save_article(title, content)
+        # hint: save_article(content)
+        save_article(titlex, contentx)
+        
 
 
 ##########################################################################
