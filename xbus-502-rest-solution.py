@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 """
-Model answer for REST Workshop
-
-NOTE: In order to use this program, be sure to create a sub-directory
-called 'releases'
+Template answer for REST Workshop
 """
 ##########################################################################
 ## Imports
@@ -18,7 +15,7 @@ import requests
 ## Module Variables/Constants
 ##########################################################################
 
-DOJ_RELEASES_URL = 'http://www.justice.gov/api/v1/press_releases.json?pagesize=5'
+DOJ_RELEASES_URL = "http://www.justice.gov/api/v1/press_releases.json?pagesize=5&direction=DESC&sort=date"
 
 
 ##########################################################################
@@ -31,13 +28,12 @@ def fetch_press_releases():
     'results' attribute of the JSON response
     """
     # execute a GET request and store the results
-    response = requests.get(DOJ_RELEASES_URL)
-
+    r = requests.get(DOJ_RELEASES_URL) 
     # decode as json and store the results
-    data = response.json()
-
+    data = r.json()
     # return the 'results' array of press releases
-    return data['results']
+    results = data['results']
+    return(results)
 
 
 def main():
@@ -46,21 +42,15 @@ def main():
     """
     # fetch array of press releases
     press_releases = fetch_press_releases()
-
     # iterate press releases
     for release in press_releases:
-
-        # NOTE: be sure the releases subdirectory exists
-        path = './releases/{}.json'.format(release['uuid'])
-        content = json.dumps(release)
-
-        with open(path, 'w') as f:
-            f.write(content)
-
-
-##########################################################################
-## Execution
-##########################################################################
+        print(release['title'])
+        # save content to a new file in the releases sub-directory
+        fname = release['title'] + '.json'
+        with open(fname, 'w') as outfile:
+            json.dump(release, outfile)
+        
 
 if __name__ == '__main__':
     main()
+
