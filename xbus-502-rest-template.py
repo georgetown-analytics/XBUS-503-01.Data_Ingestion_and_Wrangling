@@ -8,6 +8,7 @@ Template answer for REST Workshop
 
 import os
 import json
+from pprint import pprint
 import requests
 
 
@@ -15,7 +16,7 @@ import requests
 ## Module Variables/Constants
 ##########################################################################
 
-DOJ_RELEASES_URL = 'http://www.justice.gov/api/v1/press_releases.json?pagesize=5'
+DOJ_RELEASES_URL = 'http://www.justice.gov/api/v1/press_releases.json?pagesize=5&direction=DESC&sort=date'
 
 
 ##########################################################################
@@ -57,4 +58,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
